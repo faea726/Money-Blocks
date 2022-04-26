@@ -25,6 +25,10 @@ contract MoneyBlocks {
         _;
     }
 
+    function endBlockOf(address adr) public view returns (uint256) {
+        return _endBlock[adr];
+    }
+
     function authorize(address adr) external authorized {
         require(!_isAuthorized[adr], "Error: already authorized!");
         _isAuthorized[adr] = true;
@@ -39,7 +43,7 @@ contract MoneyBlocks {
         return _isAuthorized[adr];
     }
 
-    function settokenChargeFee(address tokenAddress_) external authorized {
+    function setTokenChargeFee(address tokenAddress_) external authorized {
         tokenChargeFee = tokenAddress_;
         _tokenFee = IERC20(tokenChargeFee);
     }
