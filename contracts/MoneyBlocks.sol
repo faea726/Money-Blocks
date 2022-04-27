@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.10;
 
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
@@ -27,6 +28,10 @@ contract MoneyBlocks {
 
     function endBlockOf(address adr) public view returns (uint256) {
         return _endBlock[adr];
+    }
+
+    function isExpired(address adr) public view returns (bool) {
+        return (block.number > _endBlock[adr]);
     }
 
     function authorize(address adr) external authorized {
