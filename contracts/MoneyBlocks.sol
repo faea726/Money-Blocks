@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.8;
 
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -34,6 +34,10 @@ contract MoneyBlocks {
         return (block.number > _endBlock[adr]);
     }
 
+    function isAuthorized(address adr) public view returns (bool) {
+        return _isAuthorized[adr];
+    }
+
     function authorize(address adr) external authorized {
         require(!_isAuthorized[adr], "Error: already authorized!");
         _isAuthorized[adr] = true;
@@ -42,10 +46,6 @@ contract MoneyBlocks {
     function unAuthorize(address adr) external authorized {
         require(_isAuthorized[adr], "Error: not authorized!");
         _isAuthorized[adr] = false;
-    }
-
-    function isAuthorized(address adr) public view returns (bool) {
-        return _isAuthorized[adr];
     }
 
     function setTokenChargeFee(address tokenAddress_) external authorized {
@@ -87,5 +87,9 @@ contract MoneyBlocks {
         }
         uint256 extraBlocks = amount.div(_blockPrice);
         _endBlock[buyer] = _endBlock[buyer].add(extraBlocks);
+    }
+
+    function addblock(address adr, uint256 amount) external authorized {
+        _addBlock(adr, amount);
     }
 }
