@@ -13,8 +13,12 @@ npm install
 
 ## Usage
 
+Choose Network in `hardhat.config.js` (`ETH` or `BSC`) 
+
 ```bash
-Update later
+npx hardhat test
+
+npx hardhat flatten <path_to_file> > flat_<filename>.sol
 ```
 
 ## Contributing
