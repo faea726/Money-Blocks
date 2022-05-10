@@ -7,18 +7,19 @@ Money Blocks is a Solidity contract. To count remaining time of user via blockch
 Use the package manager [npm](https://www.npmjs.com/) to install.
 
 ```bash
-npm install -g truffle
 npm install
 ```
 
 ## Usage
 
-Choose Network in `hardhat.config.js` (`ETH` or `BSC`) 
+Open `hardhat.config.js`
+Choose network `ETH` or `BSC`
+Input `PRIVATE_KEY`
 
 ```bash
 npx hardhat test
-
-npx hardhat flatten <path_to_file> > flat_<filename>.sol
+npx hardhat run <path/to/script> --network <Network_name>
+npx hardhat verify "<contract_address>" --network <Network_name>
 ```
 
 ## Contributing
