@@ -5,7 +5,7 @@
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| Money-Blocks\contracts\MoneyBlocks.sol | 1b580b7850ee9992dab3b66fffc32090100775a9 |
+| Money-Blocks/contracts/MoneyBlocks.sol | 1b580b7850ee9992dab3b66fffc32090100775a9 |
 
 
  Contracts Description Table
