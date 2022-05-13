@@ -1,0 +1,90 @@
+digraph G {
+  graph [ ratio = "auto", page = "100", compound =true, bgcolor = "#2e3e56" ];
+  node [ style = "filled", fillcolor = "#edad56", color = "#edad56", penwidth =3 ];
+  edge [ color = "#fcfcfc", penwidth =2, fontname = "helvetica Neue Ultra Light" ];
+subgraph "clusterMoneyBlocks" {
+  graph [ label = "MoneyBlocks", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
+  "MoneyBlocks.<Constructor>" [ label = "<Constructor>", color = "#FF9797", fillcolor = "#FF9797" ];
+  "MoneyBlocks.authorized" [ label = "authorized", color = "#1bc6a6", shape =doubleoctagon ];
+  "MoneyBlocks.endBlockOf" [ label = "endBlockOf", color = "#FF9797", fillcolor = "#FF9797" ];
+  "MoneyBlocks.isExpired" [ label = "isExpired", color = "#FF9797", fillcolor = "#FF9797" ];
+  "MoneyBlocks.isAuthorized" [ label = "isAuthorized", color = "#FF9797", fillcolor = "#FF9797" ];
+  "MoneyBlocks.authorize" [ label = "authorize", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.unAuthorize" [ label = "unAuthorize", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.setTokenChargeFee" [ label = "setTokenChargeFee", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.setBlockPrice" [ label = "setBlockPrice", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.withdrawETH" [ label = "withdrawETH", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.withdrawToken" [ label = "withdrawToken", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.deposit" [ label = "deposit", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks._addBlock" [ label = "_addBlock" ];
+  "MoneyBlocks.addblock" [ label = "addblock", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.IERC20" [ label = "IERC20" ];
+  "MoneyBlocks.payable" [ label = "payable" ];
+}
+
+subgraph "clusterIERC20" {
+  graph [ label = "IERC20", color = "#e8726d", fontcolor = "#f0f0f0", style = "rounded,dashed", bgcolor = "#3b4b63" ];
+  "IERC20.transfer" [ label = "transfer" ];
+  "IERC20.balanceOf" [ label = "balanceOf" ];
+  "IERC20.approve" [ label = "approve" ];
+  "IERC20.transferFrom" [ label = "transferFrom" ];
+}
+
+subgraph "clusteramount" {
+  graph [ label = "amount", color = "#e8726d", fontcolor = "#f0f0f0", style = "rounded,dashed", bgcolor = "#3b4b63" ];
+  "amount.div" [ label = "div" ];
+}
+
+  "MoneyBlocks.<Constructor>";
+  "MoneyBlocks.IERC20";
+  "MoneyBlocks.setTokenChargeFee";
+  "MoneyBlocks.withdrawETH";
+  "MoneyBlocks.payable";
+  "MoneyBlocks.withdrawToken";
+  "IERC20.transfer";
+  "IERC20.balanceOf";
+  "MoneyBlocks.deposit";
+  "IERC20.approve";
+  "IERC20.transferFrom";
+  "MoneyBlocks._addBlock";
+  "amount.div";
+  "MoneyBlocks.addblock";
+  "MoneyBlocks.<Constructor>" -> "MoneyBlocks.IERC20" [ color = "#1bc6a6" ];
+  "MoneyBlocks.setTokenChargeFee" -> "MoneyBlocks.IERC20" [ color = "#1bc6a6" ];
+  "MoneyBlocks.withdrawETH" -> "MoneyBlocks.payable" [ color = "#1bc6a6" ];
+  "MoneyBlocks.withdrawToken" -> "MoneyBlocks.IERC20" [ color = "#1bc6a6" ];
+  "MoneyBlocks.withdrawToken" -> "IERC20.transfer" [ color = "white" ];
+  "MoneyBlocks.withdrawToken" -> "IERC20.balanceOf" [ color = "white" ];
+  "MoneyBlocks.deposit" -> "IERC20.approve" [ color = "white" ];
+  "MoneyBlocks.deposit" -> "IERC20.transferFrom" [ color = "white" ];
+  "MoneyBlocks.deposit" -> "MoneyBlocks._addBlock" [ color = "#1bc6a6" ];
+  "MoneyBlocks._addBlock" -> "amount.div" [ color = "white" ];
+  "MoneyBlocks.addblock" -> "MoneyBlocks._addBlock" [ color = "#1bc6a6" ];
+
+
+rankdir=LR
+node [shape=plaintext]
+subgraph cluster_01 { 
+label = "Legend";
+key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+  <tr><td align="right" port="i1">Internal Call</td></tr>
+  <tr><td align="right" port="i2">External Call</td></tr>
+  <tr><td align="right" port="i3">Defined Contract</td></tr>
+  <tr><td align="right" port="i4">Undefined Contract</td></tr>
+  </table>>]
+key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+  <tr><td port="i1">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i2">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i3" bgcolor="#445773">&nbsp;&nbsp;&nbsp;</td></tr>
+  <tr><td port="i4">
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="7" color="#e8726d">
+      <tr>
+       <td></td>
+      </tr>
+     </table>
+  </td></tr>
+  </table>>]
+key:i1:e -> key2:i1:w [color="#1bc6a6"]
+key:i2:e -> key2:i2:w [color="white"]
+}
+}

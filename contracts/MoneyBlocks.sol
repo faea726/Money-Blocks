@@ -59,7 +59,9 @@ contract MoneyBlocks {
 
     function withdrawETH(address to) external authorized {
         uint256 contractETHBalance = address(this).balance;
-        payable(to).transfer(contractETHBalance);
+        if (contractETHBalance != 0) {
+            payable(to).transfer(contractETHBalance);
+        }
     }
 
     function withdrawToken(address tokenAddress, address to)
@@ -67,18 +69,23 @@ contract MoneyBlocks {
         authorized
     {
         IERC20 tokenContract = IERC20(tokenAddress);
-        tokenContract.transfer(to, tokenContract.balanceOf(address(this)));
+        if (
+            tokenContract.transfer(to, tokenContract.balanceOf(address(this)))
+        ) {
+            return;
+        }
     }
 
     function deposit(uint256 amount) external {
         require(amount >= _blockPrice, "Error: insufficient balance!");
 
-        _tokenFee.approve(address(this), amount);
-        address buyer = msg.sender;
-        bool success = _tokenFee.transferFrom(buyer, address(this), amount);
+        if (_tokenFee.approve(address(this), amount)) {
+            address buyer = msg.sender;
+            bool success = _tokenFee.transferFrom(buyer, address(this), amount);
 
-        require(success, "Error: deposit failed!");
-        _addBlock(buyer, amount);
+            require(success, "Error: deposit failed!");
+            _addBlock(buyer, amount);
+        }
     }
 
     function _addBlock(address buyer, uint256 amount) internal {
