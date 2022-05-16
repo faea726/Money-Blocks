@@ -6,9 +6,9 @@ subgraph "clusterMoneyBlocks" {
   graph [ label = "MoneyBlocks", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
   "MoneyBlocks.<Constructor>" [ label = "<Constructor>", color = "#FF9797", fillcolor = "#FF9797" ];
   "MoneyBlocks.authorized" [ label = "authorized", color = "#1bc6a6", shape =doubleoctagon ];
-  "MoneyBlocks.endBlockOf" [ label = "endBlockOf", color = "#FF9797", fillcolor = "#FF9797" ];
-  "MoneyBlocks.isExpired" [ label = "isExpired", color = "#FF9797", fillcolor = "#FF9797" ];
-  "MoneyBlocks.isAuthorized" [ label = "isAuthorized", color = "#FF9797", fillcolor = "#FF9797" ];
+  "MoneyBlocks.endBlockOf" [ label = "endBlockOf", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.isExpired" [ label = "isExpired", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
+  "MoneyBlocks.isAuthorized" [ label = "isAuthorized", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
   "MoneyBlocks.authorize" [ label = "authorize", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
   "MoneyBlocks.unAuthorize" [ label = "unAuthorize", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
   "MoneyBlocks.setTokenChargeFee" [ label = "setTokenChargeFee", color = "#ffbdb9", fillcolor = "#ffbdb9" ];
@@ -35,6 +35,11 @@ subgraph "clusteramount" {
   "amount.div" [ label = "div" ];
 }
 
+subgraph "clusterblockAfter" {
+  graph [ label = "blockAfter", color = "#e8726d", fontcolor = "#f0f0f0", style = "rounded,dashed", bgcolor = "#3b4b63" ];
+  "blockAfter.sub" [ label = "sub" ];
+}
+
   "MoneyBlocks.<Constructor>";
   "MoneyBlocks.IERC20";
   "MoneyBlocks.setTokenChargeFee";
@@ -48,6 +53,7 @@ subgraph "clusteramount" {
   "IERC20.transferFrom";
   "MoneyBlocks._addBlock";
   "amount.div";
+  "blockAfter.sub";
   "MoneyBlocks.addblock";
   "MoneyBlocks.<Constructor>" -> "MoneyBlocks.IERC20" [ color = "#1bc6a6" ];
   "MoneyBlocks.setTokenChargeFee" -> "MoneyBlocks.IERC20" [ color = "#1bc6a6" ];
@@ -59,6 +65,7 @@ subgraph "clusteramount" {
   "MoneyBlocks.deposit" -> "IERC20.transferFrom" [ color = "white" ];
   "MoneyBlocks.deposit" -> "MoneyBlocks._addBlock" [ color = "#1bc6a6" ];
   "MoneyBlocks._addBlock" -> "amount.div" [ color = "white" ];
+  "MoneyBlocks._addBlock" -> "blockAfter.sub" [ color = "white" ];
   "MoneyBlocks.addblock" -> "MoneyBlocks._addBlock" [ color = "#1bc6a6" ];
 
 

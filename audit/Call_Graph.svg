@@ -1,8 +1,8 @@
 <?xml version="1.0" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="465pt" height="1141pt" viewBox="0.00 0.00 465.43 1141.00">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="468pt" height="1141pt" viewBox="0.00 0.00 468.43 1141.00">
 <g id="graph0" class="graph" transform="translate(4,1137) scale(1)" data-name="G">
 
-<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1137 461.43,-1137 461.43,4 -4,4" style=""/>
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1137 464.43,-1137 464.43,4 -4,4" style=""/>
 <g id="clust1" class="cluster" data-name="clusterMoneyBlocks">
 
 <path fill="#445773" stroke="#445773" d="M20,-255C20,-255 338.86,-255 338.86,-255 344.86,-255 350.86,-261 350.86,-267 350.86,-267 350.86,-976 350.86,-976 350.86,-982 344.86,-988 338.86,-988 338.86,-988 20,-988 20,-988 14,-988 8,-982 8,-976 8,-976 8,-267 8,-267 8,-261 14,-255 20,-255" style=""/>
@@ -15,10 +15,15 @@
 </g>
 <g id="clust3" class="cluster" data-name="clusteramount">
 
-<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M391.43,-309C391.43,-309 437.43,-309 437.43,-309 443.43,-309 449.43,-315 449.43,-321 449.43,-321 449.43,-374 449.43,-374 449.43,-380 443.43,-386 437.43,-386 437.43,-386 391.43,-386 391.43,-386 385.43,-386 379.43,-380 379.43,-374 379.43,-374 379.43,-321 379.43,-321 379.43,-315 385.43,-309 391.43,-309" style=""/>
-<text text-anchor="middle" x="414.43" y="-369.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount</text>
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M394.43,-351C394.43,-351 440.43,-351 440.43,-351 446.43,-351 452.43,-357 452.43,-363 452.43,-363 452.43,-416 452.43,-416 452.43,-422 446.43,-428 440.43,-428 440.43,-428 394.43,-428 394.43,-428 388.43,-428 382.43,-422 382.43,-416 382.43,-416 382.43,-363 382.43,-363 382.43,-357 388.43,-351 394.43,-351" style=""/>
+<text text-anchor="middle" x="417.43" y="-411.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount</text>
 </g>
-<g id="clust4" class="cluster" data-name="cluster_01">
+<g id="clust4" class="cluster" data-name="clusterblockAfter">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M391.43,-266C391.43,-266 443.43,-266 443.43,-266 449.43,-266 455.43,-272 455.43,-278 455.43,-278 455.43,-331 455.43,-331 455.43,-337 449.43,-343 443.43,-343 443.43,-343 391.43,-343 391.43,-343 385.43,-343 379.43,-337 379.43,-331 379.43,-331 379.43,-278 379.43,-278 379.43,-272 385.43,-266 391.43,-266" style=""/>
+<text text-anchor="middle" x="417.43" y="-326.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">blockAfter</text>
+</g>
+<g id="clust5" class="cluster" data-name="cluster_01">
 
 <polygon fill="#2e3e56" stroke="black" points="31.26,-996 31.26,-1125 324.98,-1125 324.98,-996 31.26,-996" style=""/>
 <text text-anchor="middle" x="178.12" y="-1108.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
@@ -51,19 +56,19 @@
 <!-- MoneyBlocks.endBlockOf -->
 <g id="node3" class="node" pointer-events="visible" data-name="MoneyBlocks.endBlockOf">
 
-<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="104.26" cy="-821" rx="58.47" ry="18" style=""/>
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="104.26" cy="-821" rx="58.47" ry="18" style=""/>
 <text text-anchor="middle" x="104.26" y="-816.8" font-family="Times,serif" font-size="14.00" style="">endBlockOf</text>
 </g>
 <!-- MoneyBlocks.isExpired -->
 <g id="node4" class="node" pointer-events="visible" data-name="MoneyBlocks.isExpired">
 
-<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="104.26" cy="-767" rx="48.09" ry="18" style=""/>
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="104.26" cy="-767" rx="48.09" ry="18" style=""/>
 <text text-anchor="middle" x="104.26" y="-762.8" font-family="Times,serif" font-size="14.00" style="">isExpired</text>
 </g>
 <!-- MoneyBlocks.isAuthorized -->
 <g id="node5" class="node" pointer-events="visible" data-name="MoneyBlocks.isAuthorized">
 
-<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="104.26" cy="-713" rx="60.84" ry="18" style=""/>
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="104.26" cy="-713" rx="60.84" ry="18" style=""/>
 <text text-anchor="middle" x="104.26" y="-708.8" font-family="Times,serif" font-size="14.00" style="">isAuthorized</text>
 </g>
 <!-- MoneyBlocks.authorize -->
@@ -195,14 +200,26 @@
 <!-- amount.div -->
 <g id="node21" class="node" pointer-events="visible" data-name="amount.div">
 
-<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="414.43" cy="-335" rx="27" ry="18" style=""/>
-<text text-anchor="middle" x="414.43" y="-330.8" font-family="Times,serif" font-size="14.00" style="">div</text>
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="417.43" cy="-377" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="417.43" y="-372.8" font-family="Times,serif" font-size="14.00" style="">div</text>
 </g>
 <!-- MoneyBlocks._addBlock&#45;&gt;amount.div -->
 <g id="edge10" class="edge" data-name="MoneyBlocks._addBlock-&gt;amount.div">
 
-<path fill="none" stroke="white" stroke-width="2" d="M342.91,-335C354.35,-335 366.23,-335 376.91,-335" style=""/>
-<polygon fill="white" stroke="white" stroke-width="2" points="377.13,-338.5 387.13,-335 377.13,-331.5 377.13,-338.5" style=""/>
+<path fill="none" stroke="white" stroke-width="2" d="M328.28,-347.49C345.79,-353.35 366.48,-360.28 383.42,-365.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="382.31,-369.27 392.9,-369.12 384.53,-362.63 382.31,-369.27" style=""/>
+</g>
+<!-- blockAfter.sub -->
+<g id="node22" class="node" pointer-events="visible" data-name="blockAfter.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="417.43" cy="-292" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="417.43" y="-287.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- MoneyBlocks._addBlock&#45;&gt;blockAfter.sub -->
+<g id="edge11" class="edge" data-name="MoneyBlocks._addBlock-&gt;blockAfter.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M327.94,-322.33C345.58,-316.28 366.52,-309.11 383.59,-303.26" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="384.82,-306.53 393.15,-299.98 382.55,-299.91 384.82,-306.53" style=""/>
 </g>
 <!-- MoneyBlocks.addblock -->
 <g id="node14" class="node" pointer-events="visible" data-name="MoneyBlocks.addblock">
@@ -211,13 +228,13 @@
 <text text-anchor="middle" x="104.26" y="-384.8" font-family="Times,serif" font-size="14.00" style="">addblock</text>
 </g>
 <!-- MoneyBlocks.addblock&#45;&gt;MoneyBlocks._addBlock -->
-<g id="edge11" class="edge" data-name="MoneyBlocks.addblock-&gt;MoneyBlocks._addBlock">
+<g id="edge12" class="edge" data-name="MoneyBlocks.addblock-&gt;MoneyBlocks._addBlock">
 
 <path fill="none" stroke="#1bc6a6" stroke-width="2" d="M142,-378.2C170.06,-369.95 209.02,-358.5 239.77,-349.46" style=""/>
 <polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="240.84,-352.8 249.45,-346.62 238.86,-346.08 240.84,-352.8" style=""/>
 </g>
 <!-- key -->
-<g id="node22" class="node" pointer-events="visible" data-name="key">
+<g id="node23" class="node" pointer-events="visible" data-name="key">
 
 <polygon fill="#edad56" stroke="transparent" stroke-width="3" points="169.26,-1092 39.26,-1092 39.26,-1004 169.26,-1004 169.26,-1092" style=""/>
 <text text-anchor="start" x="88.9" y="-1073.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
@@ -226,7 +243,7 @@
 <text text-anchor="start" x="48.87" y="-1013.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
 </g>
 <!-- key2 -->
-<g id="node23" class="node" pointer-events="visible" data-name="key2">
+<g id="node24" class="node" pointer-events="visible" data-name="key2">
 
 <polygon fill="#edad56" stroke="transparent" stroke-width="3" points="316.98,-1092 262.98,-1092 262.98,-1004 316.98,-1004 316.98,-1092" style=""/>
 <text text-anchor="start" x="279.98" y="-1073.4" font-family="Times,serif" font-size="14.00" style="">   </text>
@@ -236,13 +253,13 @@
 <polygon fill="none" stroke="#e8726d" points="279.98,-1010 279.98,-1026 300.98,-1026 300.98,-1010 279.98,-1010" style=""/>
 </g>
 <!-- key&#45;&gt;key2 -->
-<g id="edge12" class="edge" data-name="key-&gt;key2">
+<g id="edge13" class="edge" data-name="key-&gt;key2">
 
 <path fill="none" stroke="#1bc6a6" stroke-width="2" d="M162.26,-1078C209.66,-1078 224.01,-1078 266.77,-1078" style=""/>
 <polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="266.98,-1081.5 276.98,-1078 266.98,-1074.5 266.98,-1081.5" style=""/>
 </g>
 <!-- key&#45;&gt;key2 -->
-<g id="edge13" class="edge" data-name="key-&gt;key2">
+<g id="edge14" class="edge" data-name="key-&gt;key2">
 
 <path fill="none" stroke="white" stroke-width="2" d="M162.26,-1058C209.66,-1058 224.01,-1058 266.77,-1058" style=""/>
 <polygon fill="white" stroke="white" stroke-width="2" points="266.98,-1061.5 276.98,-1058 266.98,-1054.5 266.98,-1061.5" style=""/>

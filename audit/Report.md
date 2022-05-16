@@ -1,11 +1,11 @@
- Money's Description Report
+ Sūrya's Description Report
 
  Files Description Table
 
 
 |  File Name  |  SHA-1 Hash  |
 |-------------|--------------|
-| Money-Blocks/contracts/MoneyBlocks.sol | 1b580b7850ee9992dab3b66fffc32090100775a9 |
+| c:\Users\projectengineer12\Downloads\Softwares\code\Solidity\Money-Blocks\contracts\MoneyBlocks.sol | 027d2005b3a70f7f4a21c8176d43b4db71a6eecc |
 
 
  Contracts Description Table
@@ -17,9 +17,9 @@
 ||||||
 | **MoneyBlocks** | Implementation |  |||
 | └ | <Constructor> | Public ❗️ | 🛑  |NO❗️ |
-| └ | endBlockOf | Public ❗️ |   |NO❗️ |
-| └ | isExpired | Public ❗️ |   |NO❗️ |
-| └ | isAuthorized | Public ❗️ |   |NO❗️ |
+| └ | endBlockOf | External ❗️ |   |NO❗️ |
+| └ | isExpired | External ❗️ |   |NO❗️ |
+| └ | isAuthorized | External ❗️ |   |NO❗️ |
 | └ | authorize | External ❗️ | 🛑  | authorized |
 | └ | unAuthorize | External ❗️ | 🛑  | authorized |
 | └ | setTokenChargeFee | External ❗️ | 🛑  | authorized |
