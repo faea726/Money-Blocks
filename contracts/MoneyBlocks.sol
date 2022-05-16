@@ -26,15 +26,15 @@ contract MoneyBlocks {
         _;
     }
 
-    function endBlockOf(address adr) public view returns (uint256) {
+    function endBlockOf(address adr) external view returns (uint256) {
         return _endBlock[adr];
     }
 
-    function isExpired(address adr) public view returns (bool) {
+    function isExpired(address adr) external view returns (bool) {
         return (block.number > _endBlock[adr]);
     }
 
-    function isAuthorized(address adr) public view returns (bool) {
+    function isAuthorized(address adr) external view returns (bool) {
         return _isAuthorized[adr];
     }
 
@@ -89,11 +89,19 @@ contract MoneyBlocks {
     }
 
     function _addBlock(address buyer, uint256 amount) internal {
-        if (_endBlock[buyer] == 0) {
+        if (_endBlock[buyer] <= block.number) {
             _endBlock[buyer] = block.number;
         }
         uint256 extraBlocks = amount.div(_blockPrice);
+        uint256 blockBefore = _endBlock[buyer];
         _endBlock[buyer] = _endBlock[buyer].add(extraBlocks);
+        uint256 blockAfter = _endBlock[buyer];
+
+        // Recheck work done
+        require(
+            blockAfter.sub(blockBefore) <= extraBlocks,
+            "Error: pending progress"
+        );
     }
 
     function addblock(address adr, uint256 amount) external authorized {
