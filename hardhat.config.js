@@ -4,8 +4,8 @@
 require('@nomiclabs/hardhat-waffle');
 require('@nomiclabs/hardhat-etherscan');
 
-const TEST_PRIVATE_KEY = "039d17fedb3da5634bc09a7242c8be5d25f74eb3bdd7287ef8dc9e7e5defc0ec";
-const MAIN_PRIVATE_KEY = "039d17fedb3da5634bc09a7242c8be5d25f74eb3bdd7287ef8dc9e7e5defc0ec";
+const TEST_PRIVATE_KEY = "";
+const MAIN_PRIVATE_KEY = "";
 
 module.exports = {
   solidity: "0.8.9",
@@ -34,6 +34,6 @@ module.exports = {
   },
 
   etherscan: {
-    apiKey: "PNAH1XT8KQQYWFN4CFZICR1NIF8PI8TIJ2"
+    apiKey: ""
   }
 };
